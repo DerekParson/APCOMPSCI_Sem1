@@ -1,0 +1,9 @@
+Notes:
+
+
+Ascii art is a way to make art from text and I learned to use java to print ascii messages. 
+
+A few useful things that I learned were about backslashes and how to use escape characters.
+
+When I researched escape characters I was able to learn about some escape characters such as \n, which makes a new line.
+I also figured out that backslash can still be typed by using one as an escape character and the other as the real character.
