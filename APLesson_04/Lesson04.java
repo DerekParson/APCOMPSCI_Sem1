@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Lesson04
 {
 	public static void main(String[]args)
@@ -17,7 +19,7 @@ public class Lesson04
 	
 	public void format(String word, double number)
 	{
-		System.out.printf("\n%10s %10.2f", word, number);
+		System.out.printf("%n%-10s %10.2f", word, number);
 	}
 	
 	
