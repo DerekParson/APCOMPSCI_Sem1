@@ -14,22 +14,24 @@ public class Lab_04
 		double price1 = keyboard.nextDouble();
 	
 		System.out.println("Please enter item 2");
-		String item2 = keyboard.nextLine();
 		keyboard.nextLine();
+		String item2 = keyboard.nextLine();
 		System.out.println("Please enter the price");
 		double price2 = keyboard.nextDouble();
-	
+		
 		System.out.println("Please enter item 3");
-		String item3 = keyboard.nextLine();
 		keyboard.nextLine();
+		String item3 = keyboard.nextLine();
 		System.out.println("Please enter the price");
-		double price3 = keyboard.nextDouble();
+		double price3 = keyboard.nextDouble();	
 		
 		double subtotal = price1 + price2 + price3;
 		double tax = subtotal * 0.08;
 		double total = subtotal * 1.08;
 		
 		System.out.println("<<<<<<<<<<<< Receipt >>>>>>>>>>>>");
+		System.out.println("_________________________________");
+		System.out.println("<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>");	
 		receipt.format(item1, price1);		
 		receipt.format(item2, price2);			
 		receipt.format(item3, price3);
@@ -42,11 +44,38 @@ public class Lab_04
 		System.out.println("   Thank you for your service!   ");
 		System.out.println("_________________________________");
 		System.out.println("<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>");	
-		}
-	
+		
+		Lab_04 idCard = new Lab_04();
+		
+		System.out.println("Enter your first name");
+		String firstName = keyboard.next();
+		System.out.println("Enter your last name");
+		String lastName = keyboard.next();
+		System.out.println("Enter your title");
+		String title = keyboard.next();
+		System.out.println("Enter your school site");
+		keyboard.nextLine();
+		String schoolSite = keyboard.nextLine();
+		System.out.println("Enter the school year");
+		String year = keyboard.nextLine();
+		System.out.println("What is your subject?");
+		keyboard.nextLine();
+		String subject = keyboard.nextLine();
+		System.out.println("\t");
+		keyboard.nextLine();
+		
+		System.out.println("*************************************************");
+		idCard.format2(schoolSite, year);
+		idCard.format2(firstName, lastName);
+		idCard.format2(title, subject);
+		System.out.println("*************************************************");
+	}
 	public void format(String item, double price)
 	{
-		
-		System.out.printf("%n%-2s %-15s %-8s %6.2f", "* ",item, ". . . .", price);
+		System.out.printf("\n %-2s %-15s %-8s %6.2f", "* ",item, ". . . .", price);
+	}
+	public void format2(String leftHalf, String rightHalf)
+	{
+		System.out.printf("%n%-2s %20s %20s %2s", "* ", leftHalf, rightHalf, " *\n");
 	}
 }
