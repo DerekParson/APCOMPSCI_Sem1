@@ -4,9 +4,10 @@ public class Lab_04
 {
 	public static void main(String[]args)
 	{
-		Lab_04 receipt = new Lab_04();
-		
 		Scanner keyboard = new Scanner(System.in);
+		
+		//EX_01
+		Lab_04 receipt = new Lab_04();
 		
 		System.out.println("Please enter item 1");
 		String item1 = keyboard.nextLine();
@@ -45,6 +46,7 @@ public class Lab_04
 		System.out.println("_________________________________");
 		System.out.println("<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>");	
 		
+		//EX_02
 		Lab_04 idCard = new Lab_04();
 		
 		System.out.println("Enter your first name");
@@ -52,16 +54,16 @@ public class Lab_04
 		System.out.println("Enter your last name");
 		String lastName = keyboard.next();
 		System.out.println("Enter your title");
-		String title = keyboard.next();
-		System.out.println("Enter your school site");
+		String title = keyboard.nextLine();
 		keyboard.nextLine();
+		System.out.println("Enter your school site");
 		String schoolSite = keyboard.nextLine();
+		keyboard.nextLine();
 		System.out.println("Enter the school year");
 		String year = keyboard.nextLine();
-		System.out.println("What is your subject?");
 		keyboard.nextLine();
+		System.out.println("What is your subject?");
 		String subject = keyboard.nextLine();
-		System.out.println("\t");
 		keyboard.nextLine();
 		
 		System.out.println("*************************************************");
