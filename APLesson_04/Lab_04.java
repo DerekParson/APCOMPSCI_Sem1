@@ -54,17 +54,18 @@ public class Lab_04
 		System.out.println("Enter your last name");
 		String lastName = keyboard.next();
 		System.out.println("Enter your title");
-		String title = keyboard.nextLine();
-		keyboard.nextLine();
+		String title = keyboard.next();
 		System.out.println("Enter your school site");
+		keyboard.nextLine();
 		String schoolSite = keyboard.nextLine();
-		keyboard.nextLine();
+		
 		System.out.println("Enter the school year");
-		String year = keyboard.nextLine();
+		String year = keyboard.next();
 		keyboard.nextLine();
+		
 		System.out.println("What is your subject?");
 		String subject = keyboard.nextLine();
-		keyboard.nextLine();
+		
 		
 		System.out.println("*************************************************");
 		idCard.format2(schoolSite, year);
@@ -78,6 +79,6 @@ public class Lab_04
 	}
 	public void format2(String leftHalf, String rightHalf)
 	{
-		System.out.printf("%n%-2s %20s %20s %2s", "* ", leftHalf, rightHalf, " *\n");
+		System.out.printf("%n%-2s %15s %15s %2s", "* ", leftHalf, rightHalf, " *\n");
 	}
 }
