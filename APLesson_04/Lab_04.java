@@ -58,11 +58,9 @@ public class Lab_04
 		System.out.println("Enter your school site");
 		keyboard.nextLine();
 		String schoolSite = keyboard.nextLine();
-		
 		System.out.println("Enter the school year");
 		String year = keyboard.next();
 		keyboard.nextLine();
-		
 		System.out.println("What is your subject?");
 		String subject = keyboard.nextLine();
 		

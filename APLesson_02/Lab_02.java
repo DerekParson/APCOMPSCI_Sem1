@@ -14,7 +14,7 @@ public class Lab_02
 		String city = "Suburbia";
 		int zip = 12345;
 		
-		System.out.println("\n" + name + "\n" + addressNum + " " + addressName + "\n" + city + "\n" + zip);
+		System.out.println("\n" + name + "\n" + addressNum + " " + addressName + "\n" + city + " " + zip);
 		
 		int length = 1940;
 		int height = 145;
