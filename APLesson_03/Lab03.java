@@ -21,12 +21,12 @@ public class Lab03
 		System.out.println("I think you'd have to be smarter to be a " + job + ". \nSo, " + name + ", you're " + age + "...\nYou like to " + fun + " and listen to " + music + "...\nGood luck becoming a " + job + ".\nI'm only kiddin' " + name + ".");
 	
 		//EX_02
-		System.out.println("\nHello. Please input your height to the nearest tenth of a meter.");
+		System.out.println("\nHello. Please input your height to the nearest tenth of an inch.");
 		double height = keyboard.nextDouble();
-		System.out.println("Height Recorded as " + height + " meters.\nPlease input your weight to the nearest kilogram.");
+		System.out.println("Height Recorded as " + height + " inches.\nPlease input your weight to the nearest pound.");
 		int weight = keyboard.nextInt();
-		System.out.println("Weight Recorded as " + weight + "kilograms. Calculating BMI.");
-		double bmi = weight / (height * height);
+		System.out.println("Weight Recorded as " + weight + "pounds. Calculating BMI.");
+		double bmi = 703 * weight / (height * height);
 		System.out.println("Your BMI is " + bmi);
 		
 		//EX_03
