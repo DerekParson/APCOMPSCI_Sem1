@@ -31,7 +31,7 @@ public class Lab_04_1
 		System.out.println("Enter width");
 		double width = keyboard.nextDouble();
 		
-		System.out.printf("The volume of your Subwoofer in cubic feet is %10.2f\n", subwoofer.calcVol(height, length, width));
+		System.out.printf("The volume of your Subwoofer in cubic feet is %-10.2f\n", subwoofer.calcVol(height, length, width));
 		
 	}
 	public double monthlyPayment(double r, double p, double n, double t)

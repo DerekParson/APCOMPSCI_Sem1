@@ -17,11 +17,10 @@ public class Rectangle
 	}
 	public static void calcPerim()
 	{
-		
 		perimeter = length*2 + width*2;
 	}
 	public static void print()
 	{
-		System.out.printf("Your rectangle is %-100.5f feet around", perimeter);
+		System.out.printf("Your rectangle is %.5f feet around", perimeter);
 	}
 }
