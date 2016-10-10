@@ -15,7 +15,7 @@ public class Lesson04
 		int num2 = 34;
 		int num3 = 56;
 		double avg = average.calcAvg(num1, num2, num3);
-		System.out.println(average.calcAvg)
+		System.out.println(average.calcAvg);
 		
 		
 		String word1 = "no";
