@@ -48,18 +48,16 @@ public class Lab_05
 		
 	}
 	//Exercise_01
-	public static String rollDice(int r1, int r2)
+	public static String rollDice(int playerRoll, int compRoll)
 	{
 		String winner = "";
-		boolean tF = (r1 >= r2);
-		if(tF)
-		{
+		if(playerRoll > compRoll)
 			winner = "You";
-		}
-		if(!tF)
-		{
+		if(playerRoll < compRoll)
 			winner = "the Computer";
-		}
+		if(playerRoll == compRoll)
+			winner = "nobody. It's a tie..";
+		
 		return winner;
 	}
 	//Exercise_02
@@ -67,13 +65,9 @@ public class Lab_05
 	{
 		boolean greater2k = (num >= 2000);
 		if(greater2k)
-		{
 			discount = num * 0.15;
-		}
 		if(!greater2k)
-		{
 			discount = 0;
-		}
 		return discount;
 	}
 	public static void format(String i1, double p1, String i2, double p2, String i3, double p3, String i4, double p4, double st, double dis, double tx, double tot)
