@@ -1,9 +1,13 @@
 import java.util.Scanner;
 public class Lab_05_1
 {
+	public static String condition = "";
+	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
+		
+		//EXAMPLE_01
 		System.out.println("Enter your grade for Class 1");
 		String grade1 = kb.next();
 		System.out.println("Enter your grade for Class 2");
@@ -19,30 +23,55 @@ public class Lab_05_1
 		System.out.println("Enter your grade for Class 7");
 		String grade7 = kb.next();
 		
-		calcPoints(grade1);
-		System.out.println("Test");
-		//double totalGrades = calcPoints(grade1) + calcPoints(grade2) + calcPoints(grade3) + calcPoints(grade4) + calcPoints(grade5) + calcPoints(grade6) + calcPoints(grade7);
-		//double gpa = totalGrades / 7;
-		//System.out.println("Your GPA is " + gpa + ".");
-	}
-	public static double calcPoints(String grade);
-	{
-		String grade = "";
-		double gradePoints = 0;
+		double totalGrades = calcPoints(grade1) + calcPoints(grade2) + calcPoints(grade3) + calcPoints(grade4) + calcPoints(grade5) + calcPoints(grade6) + calcPoints(grade7);
+		double gpa = totalGrades / 7;
+		System.out.println("Your GPA is " + gpa + ".");
 		
+	
+		//EXAMPLE_02
+		System.out.println("\nPlease enter your height in inches.");
+		double height = kb.nextDouble();
+		System.out.println("Height Recorded as " + height + " inches.\nPlease enter your weight in pounds.");
+		double weight = kb.nextInt();
+		System.out.println("Weight Recorded as " + weight + " pounds.");
+		double bmi = 703 * weight / (height * height);
+		calcCond(bmi);
+		System.out.printf("Your BMI is %4.2f", bmi);
+		System.out.println("\nYour condition is " + condition + ".");	
+	}	
+	//EXAMPLE_01
+	public static double calcPoints(String grade)
+	{
 		if(grade.equals("A"))
-			gradePoints = 4.0;
+			return 4.0;
 		else if (grade.equals("B"))
-			gradePoints = 3.0;
+			return 3.0;
 		else if (grade.equals("C"))
-			gradePoints = 2.0;
+			return 2.0;
 		else if (grade.equals("D"))
-			gradePoints = 1.0;
+			return 1.0;
 		else if (grade.equals("F"))
-			gradePoints = 0.0;
+			return 0.0;
 		else
-			gradePoints = 0.0;
-		return gradePoints;
+			return 0.0;
+		
+	}
+	//EXAMPLE_02
+	public static String calcCond(double b)
+	{
+		if(b > 39.9)
+			condition = "Morbidly Obese";
+		else if(b > 35)
+			condition = "Very Obese";
+		else if(b > 29.9)
+			condition = "Obese";
+		else if(b >25 )
+			condition = "Overweight";
+		else if(b > 18.5)
+			condition = "Normal";
+		else 
+			condition = "Underweight";
+		return condition;
 	}
 	
 }
