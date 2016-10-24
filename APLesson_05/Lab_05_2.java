@@ -1,12 +1,16 @@
 import java.util.Scanner;
 public class Lab_05_2
 {
+	static Scanner kb;
 	public static void main(String[]args)
 	{
-		Scanner kb = new Scanner(System.in);
+		kb = new Scanner(System.in);
+		
+		//EXERCISE_05
 		System.out.println("Which class do you want to be? Mage or Warrior?");
 		String spec = kb.next();
 		if(spec.equals("Mage"))
+		{
 			System.out.println("You have picked Mage. Do you want a Wand of Frost or Flame?");
 			String wand = kb.next();
 			if (wand.equals("Frost"))
@@ -26,8 +30,10 @@ public class Lab_05_2
 					System.out.println("You burn the tapestry and see a chest of gold behind it. \nYou now have 500 gold coins. You win.");
 				else if(setFire.equals("N"))
 					System.out.println("You decide to forfeit the treasure and walk away, but a spear trap was concealed in the tapestry. \nYou lose.");
-			}	
-		else
+			}
+		}
+		else if(spec.equals("Warrior"))
+		{
 			System.out.println("You have picked Warrior. Do you want a Broadsword or a Dagger?");
 			String weapon = kb.next();
 			if(weapon.equals("Broadsword"))
@@ -48,5 +54,49 @@ public class Lab_05_2
 				else if (pickLock.equals("N"))
 					System.out.println("You decide to leave without the treasure and make it out of the dungeon safely.\nYou win.");
 			}
+		}
+		//EXERCISE_06
+		passwordProgram();
+	}
+	public static void passwordProgram()
+	{
+		System.out.println("Enter your Username");
+		String inputUsername = kb.next();
+		String storedUsername = "user1234";
+		System.out.println("Enter your Password");
+		String inputPassword = kb.next();
+		String storedPassword = "password1234";
+		boolean usernameEquals;
+		boolean passwordEquals;
+		
+		if(inputUsername.equals(storedUsername))
+			usernameEquals = true;
+		else 
+			usernameEquals = false;
+		if(inputPassword.equals(storedPassword))
+			passwordEquals = true;
+		else 
+			passwordEquals = false;
+	
+		if(!(usernameEquals || passwordEquals))
+		{
+			System.out.println("Your username and password are incorrect");
+			passwordProgram();
+		}
+		else if (usernameEquals || passwordEquals)
+		{
+			if(usernameEquals == false)
+			{
+				System.out.println("Your username is false");
+				passwordProgram();
+			}
+			else if(passwordEquals == false)
+			{
+				System.out.println("Your password is false");
+				passwordProgram();
+			}
+			else
+				System.out.println("You are granted access.");
+		}
 	}
 }
