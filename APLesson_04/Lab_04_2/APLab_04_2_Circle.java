@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Circle
+public class APLab_04_2_Circle
 {
 	static double r;
 	static double area;

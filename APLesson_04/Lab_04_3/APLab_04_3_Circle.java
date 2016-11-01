@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Circle
+public class APLab_04_3_Circle
 {
 	public static void main(String[]args)
 	{

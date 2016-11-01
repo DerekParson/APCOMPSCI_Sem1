@@ -1,25 +1,10 @@
-import java.util.Random;
 import java.util.Scanner;
-public class Lab_05
+public class Lab_05_Ex2
 {
 	public static double discount;
-	
 	public static void main(String[]args)
 	{
-		//Exercise_01
-		Random dice = new Random();
 		Scanner keyboard = new Scanner(System.in);
-		
-		int playerRoll = dice.nextInt(7); 
-		int compRoll = dice.nextInt(7);
-		String winner = rollDice(playerRoll, compRoll);
-		
-		System.out.println("You rolled a " + playerRoll + ".");
-		System.out.println("Computer rolled a " + compRoll + ".");
-
-		System.out.println("The winner is " + winner + ".");
-		
-		//Exercise_02
 		System.out.println("Please enter item 1");
 		String item1 = keyboard.nextLine();
 		System.out.println("Please enter the price");
@@ -45,22 +30,7 @@ public class Lab_05
 		double tax = subtotal * 0.08;
 		double total = subtotal - discount + tax;
 		format(item1, price1, item2, price2, item3, price3, item4, price4, subtotal, discount, tax, total);
-		
 	}
-	//Exercise_01
-	public static String rollDice(int playerRoll, int compRoll)
-	{
-		String winner = "";
-		if(playerRoll > compRoll)
-			winner = "You";
-		if(playerRoll < compRoll)
-			winner = "the Computer";
-		if(playerRoll == compRoll)
-			winner = "nobody. It's a tie..";
-		
-		return winner;
-	}
-	//Exercise_02
 	public static double discount(double num)
 	{
 		boolean greater2k = (num >= 2000);
@@ -72,8 +42,6 @@ public class Lab_05
 	}
 	public static void format(String i1, double p1, String i2, double p2, String i3, double p3, String i4, double p4, double st, double dis, double tx, double tot)
 	{
-
-
 		System.out.printf("\n%-10s:\t.\t.    . %6.2f", i1, p1);
 		System.out.printf("\n%-10s:\t.\t.    . %6.2f", i2, p2);
 		System.out.printf("\n%-10s:\t.\t.    . %6.2f", i3, p3);	

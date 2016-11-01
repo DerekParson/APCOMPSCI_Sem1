@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Rectangle
+public class APLab_04_2_Rectangle
 {
 	static double length;
 	static double width;

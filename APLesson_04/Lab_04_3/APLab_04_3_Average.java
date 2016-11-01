@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Average
+public class APLab_04_3_Average
 {
 	public static void main(String[]args)
 	{

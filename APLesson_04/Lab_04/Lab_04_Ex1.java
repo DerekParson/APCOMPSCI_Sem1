@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class Lab_04
+public class Lab_04_Ex1
 {
 	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
 		//EX_01
-		Lab_04 receipt = new Lab_04();
+		Lab_04_Ex1 receipt = new Lab_04_Ex1();
 		
 		System.out.println("Please enter item 1");
 		String item1 = keyboard.nextLine();
@@ -45,38 +45,9 @@ public class Lab_04
 		System.out.println("   Thank you for your service!   ");
 		System.out.println("_________________________________");
 		System.out.println("<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>");	
-		
-		//EX_02
-		Lab_04 idCard = new Lab_04();
-		
-		System.out.println("Enter your first name");
-		String firstName = keyboard.next();
-		System.out.println("Enter your last name");
-		String lastName = keyboard.next();
-		System.out.println("Enter your title");
-		String title = keyboard.next();
-		System.out.println("Enter your school site");
-		keyboard.nextLine();
-		String schoolSite = keyboard.nextLine();
-		System.out.println("Enter the school year");
-		String year = keyboard.next();
-		keyboard.nextLine();
-		System.out.println("What is your subject?");
-		String subject = keyboard.nextLine();
-		
-		
-		System.out.println("*************************************************");
-		idCard.format2(schoolSite, year);
-		idCard.format2(firstName, lastName);
-		idCard.format2(title, subject);
-		System.out.println("*************************************************");
 	}
 	public void format(String item, double price)
 	{
 		System.out.printf("\n %-2s %-15s %-8s %6.2f", "* ",item, ". . . .", price);
-	}
-	public void format2(String leftHalf, String rightHalf)
-	{
-		System.out.printf("%n%-2s %15s %15s %2s", "* ", leftHalf, rightHalf, " *\n");
 	}
 }

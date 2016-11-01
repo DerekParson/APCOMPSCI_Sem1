@@ -1,22 +1,18 @@
 import java.util.Scanner;
-public class Cube
+public class APLab_04_3_Cube
 {
-	static double side;
-	static double sa;
-	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter side length");
-		side = kb.nextDouble();
-		calcSurf();
-		print();
+		double side = kb.nextDouble();
+		print(side, calcSurf(side));
 	}
-	public static void calcSurf()
+	public static double calcSurf(double side)
 	{
-		sa = side*side*6;
+		return side*side*6;
 	}
-	public static void print()
+	public static void print(double side, double sa)
 	{
 		System.out.printf("The surface area of a cube whose sides are %.5f in length is %.5f", side, sa);
 	}

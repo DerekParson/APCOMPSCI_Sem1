@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Average
+public class APLab_04_2_Average
 {
 	static double num1;
 	static double num2;
