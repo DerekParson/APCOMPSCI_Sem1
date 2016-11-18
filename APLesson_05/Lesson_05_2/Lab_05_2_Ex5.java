@@ -5,8 +5,6 @@ public class Lab_05_2_Ex5
 	public static void main(String[]args)
 	{
 		kb = new Scanner(System.in);
-		
-		//EXERCISE_05
 		System.out.println("Which class do you want to be? Mage or Warrior?");
 		String spec = kb.next();
 		if(spec.equals("Mage"))
