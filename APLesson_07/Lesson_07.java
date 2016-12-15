@@ -10,7 +10,7 @@ public class Lesson_07
 		System.out.println("Enter a number.");
 		number = kb.nextInt();
 		countDigits();
-		System.out.println(number + " has " + digits + "digits,");
+		System.out.println(number + " has " + digits + " digits");
 	}
 	public static void countDigits()
 	{
