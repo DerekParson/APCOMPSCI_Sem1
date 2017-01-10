@@ -13,8 +13,16 @@ public class Lab_09_Ex_01
 		System.out.println("In order");
 		for(String word : words)
 		{
-			System.out.print(word + ", ");
+			System.out.print(word + " ");
+		}
+		System.out.println("\nIn reverse");
+		reverse(words);
+	}
+	public static void reverse(String[]rev)
+	{
+		for(int i = (rev.length - 1); i>=0; i--)
+		{
+		System.out.print(rev[i] + " ");
 		}
 	}
-	
 }
