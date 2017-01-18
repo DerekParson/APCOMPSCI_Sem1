@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 public class Lesson_10
 {
 	public static void main(String[]args)
@@ -40,5 +41,28 @@ public class Lesson_10
 		String letters = "a b c d e f";
 		String[] lets = letters.split(" ");
 		
+		System.out.println(Arrays.toString(lets));
+		Arrays.asList(lets);
+		ArrayList<String> letterList = new ArrayList<String>
+			(Arrays.asList(lets));
+		System.out.println(letterList);
+		
+		String nums = "1 2 3 4 5 6 7 8 9";
+		System.out.println(Integer.parseInt(nums.substring(4,5)));
+		
+		String[] digits = nums.split(" ");
+		ArrayList<Integer> numList = new ArrayList<Integer>();
+		for(int i = 0; i < digits.length; i++)
+		{
+			numList.add(Integer.parseInt(digits[i]));
+		}
+		System.out.println(numList);
+		
+		int output = 0;
+		for(int i=0; i<numList.size(); i++)
+		{
+			output += numList.get(i);
+		}
+		System.out.println(output);
 	}
 }
