@@ -13,7 +13,7 @@ public class mphRunner
 	
 	mph object = new mph(distance, hours, minutes);
 	object.setValues(distance, hours, minutes);
-	System.out.println("If you go " + distance + " miles in " + hours + " hours," + minutes + " minutes, you are going " + object.getMPH() + "mph.");
+	System.out.println("If you go " + distance + " miles in " + hours + " hours, " + minutes + " minutes, you are going " + object.getMPH() + " mph.");
 	
 	}
 }
