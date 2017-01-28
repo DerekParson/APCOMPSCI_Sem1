@@ -3,8 +3,8 @@ public class mph
 {
 	private int distance, hours, minutes;
 	private double speed;
-}
-public mph()
+	
+	public mph()
 {
 	distance = 0;
 	hours = 0;
@@ -25,8 +25,8 @@ public void setValues(int dis, int hr, int mins)
 	minutes = mins;
 	speed = 0;
 }
-public int getMPH()
+public double getMPH()
 {
-	mph = Math.round(distance / (hours + minutes / 60.0));
-	return mph
+	return speed = Math.round(distance / (hours + minutes / 60.0));
+}
 }
