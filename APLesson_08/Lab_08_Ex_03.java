@@ -6,7 +6,7 @@ public class Lab_08_Ex_03
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter a number");
 		int number = kb.nextInt();
-		System.out.println(luck(number));
+		System.out.println("There are " + luck(number) + " 7s in the number.");
 	}
 	public static int luck(int number)
 	{

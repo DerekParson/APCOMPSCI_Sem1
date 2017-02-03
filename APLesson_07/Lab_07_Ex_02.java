@@ -11,15 +11,15 @@ public class Lab_07_Ex_02
 		System.out.println("Enter a number.");
 		number = kb.nextInt();
 		avDigits();
-		System.out.printf("The average of the digits in %s is %.2f", number, average);
+		System.out.println("The average of the digits in " + number + " is " + average + ".");
 	}
 	public static void avDigits()
 	{
 		int num = number;
 		while(num > 0)
 		{
-			digits ++;
-			average += digits%10;
+			digits++;
+			average += (num%10);
 			num /= 10;
 		}	
 		average = average/digits;

@@ -17,11 +17,11 @@ public class Lab_11_Ex_05
 		{
 			System.out.println("Action:");
 			String action = kb.next();
-			if(action.equals("r"))
+			if(action.equals("r")||action.equals("R"))
 			{
 				reload();
 			}
-			if(action.equals("s"))
+			if(action.equals("s")||action.equals("S"))
 			{
 				System.out.println(shoot());
 			}
@@ -40,13 +40,13 @@ public class Lab_11_Ex_05
 	{
 		if(shotCount > 0)
 		{
-			clip[shotCount-1] = "[]";
+			clip[shotCount-1] = " []";
 			shotCount--;
-			return "BOOM!";
+			return "\nBOOM!";
 		}
 		else
 		{
-			return "Reload!";
+			return "\nReload!";
 		}
 	}
 	public static void reload()
