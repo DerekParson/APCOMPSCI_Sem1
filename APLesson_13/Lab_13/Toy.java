@@ -8,30 +8,30 @@ public abstract class Toy
 		this.name = "";
 		this.count = 0;
 	}
-	public int getCount()
-	{
-		return count;
-	}
-	public String setName()
-	{
-		this.name = n;
-	}
-	public int setCount()
-	{
-		this.count = c;
-	}	
 	public Toy(String n, int c)
 	{
 		this.name = n;
 		this.count = c;
 	}
-	public String getName();
+	public abstract String getType();
+	public void setName(String n)
+	{
+		this.name = n;
+	}
+	public void setCount(int c)
+	{
+		this.count = c;
+	}	
+	public int getCount()
+	{
+		return count;
+	}
+	public String getName()
 	{
 		return name;
 	}
-
-	public abstract String getType();
+	public String toString()
 	{
-		return "Name: " + name + ".\tCount: " + count + ".";
+		return " Name: " + name + "  Count: " + count;
 	}
 }
