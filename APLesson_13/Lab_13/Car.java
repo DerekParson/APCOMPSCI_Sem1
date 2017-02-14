@@ -1,8 +1,7 @@
 public class Car extends Toy
 {
-	private int count;
 	private String name;
-	
+		private int count;
 	public Car()
 	{
 		super();
