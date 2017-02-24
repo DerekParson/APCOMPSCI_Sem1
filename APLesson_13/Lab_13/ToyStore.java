@@ -38,9 +38,13 @@ public class ToyStore
 		for(Toy toy : toyList)
 		{
 			if(toy.getName().equals(nm))
+			{
 				return toy;
+			}
 			else
+			{
 				return null;
+			}
 		}
 	}
 	public String getMostFrequentToy()
@@ -49,10 +53,10 @@ public class ToyStore
 		int max = Integer.MIN_VALUE;
 		for(Toy toy : toyList)
 		{
-			if(max < Toy.getCount())
+			if(max < toy.getCount())
 			{
-				max = Toy.getCount();
-				name = Toy.getName();
+				max = toy.getCount();
+				name = toy.getName();
 			}
 		}
 		return name;
