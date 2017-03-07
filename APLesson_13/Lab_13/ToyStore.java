@@ -17,7 +17,7 @@ public class ToyStore
 		toyList = new ArrayList<>();
 		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		
-		for(int i = 0;i<toys.size();i++)
+		for(int i = 0;i<toys.size();i+=2)
 		{
 			String name = toys.get(i);
 			String type = toys.get(i + 1);
