@@ -1,11 +1,10 @@
-import java.util.ArrayList;
 public class ToyStoreRunner
 {
 	public static void main(String[]args)
 	{
-		ArrayList<ToyStore> ts = new ArrayList<ToyStore>();
-		System.out.println("List:" + ts);
-		System.out.println("\n\nYour most frequent toy: " + getMostFrequentToy());
-		System.out.println("Your most frequent type of toy: " + getMostFrequentType());
+		ToyStore toyst = new ToyStore("Hotwheel, Car, G.I.Joe, AF, PennyRacer, Car, Matchbox, Car, Star Wars, AF, Pullback, Car, Star Wars, AF");
+		System.out.println("List:" + toyst);
+		System.out.println("\n\nYour most frequent toy: " + toyst.getMostFrequentToy());
+		System.out.println("Your most frequent type of toy: " + toyst.getMostFrequentType());
 	}
 }

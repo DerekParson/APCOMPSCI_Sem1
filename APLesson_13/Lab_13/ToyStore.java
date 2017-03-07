@@ -1,24 +1,26 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class ToyStore
 {
 	private ArrayList<Toy> toyList = new ArrayList<Toy>();
 	
 	public ToyStore()
 	{
-		
+		toyList = new ArrayList<>();		
 	}
-	public ToyStore(String toyList)
+	public ToyStore(String tl)
 	{
-		this.loadToys(toyList);
+		toyList = loadToys(tl);
 	}
-	public void loadToys(String ts)
+	public ArrayList<Toy> loadToys(String ts)
 	{
-		String[]toys = ts.split(", ");
+		toyList = new ArrayList<>();
+		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		
-		for(int i = 0;i<toys.length;i++)
+		for(int i = 0;i<toys.size();i++)
 		{
-			String name = toys[i];
-			String type = toys[i + 1];
+			String name = toys.get(i);
+			String type = toys.get(i + 1);
 			Toy toy = getThatToy(name);
 			if(toy == null)
 			{
@@ -32,6 +34,7 @@ public class ToyStore
 				toy.setCount(toy.getCount() + 1);
 			}
 		}
+		return toyList;
 	}
 	public Toy getThatToy(String nm)
 	{
@@ -41,11 +44,8 @@ public class ToyStore
 			{
 				return toy;
 			}
-			else
-			{
-				return null;
-			}
 		}
+		return null;
 	}
 	public String getMostFrequentToy()
 	{
