@@ -1,4 +1,4 @@
-import java.util.ArrayList;4l0+
+import java.util.ArrayList;
 public class Satellite
 {
 	private static double xM, yM; 
